@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { QRCodeSVG } from 'qrcode.react'
 import Stage from '../components/Stage.jsx'
 import Notes from '../components/Notes.jsx'
 import { APP } from '../data/progressions.js'
@@ -11,6 +10,7 @@ import logo from '../assets/logo-chordisol.svg'
 import badge from '../assets/appstore-badge.svg'
 import star from '../assets/star.svg'
 import playIcon from '../assets/icon-play.svg'
+import qrCode from '../assets/qr-chordisol.png'
 
 const IDLE_SECONDS = 30 // kembali otomatis ke layar awal untuk pengunjung berikutnya
 
@@ -39,9 +39,7 @@ export default function ThanksScreen() {
         <img className="logo pop" style={{ '--i': 2 }} src={logo} alt={APP.name} width="331" height="65" />
         <img className="badge pop" style={{ '--i': 3 }} src={badge} alt="Download on the App Store" width="332.5" height="113.8" />
         <div className="qr pop" style={{ '--i': 4 }}>
-          {APP.appStoreUrl
-            ? <QRCodeSVG value={APP.appStoreUrl} size={360} bgColor="transparent" />
-            : <span>Coming soon</span>}
+          <img src={qrCode} alt={`QR code ${APP.name} di App Store`} width="410" height="410" />
         </div>
       </section>
 

@@ -162,7 +162,9 @@ img { display: block; -webkit-user-drag: none; }
   width: 457px; height: 454px; border-radius: 20px; background: #F3F3F3;
   display: grid; place-items: center;
   color: #000; font-size: 52px; font-weight: 800; letter-spacing: -0.01em;
+  overflow: hidden;
 }
+.qr img { border-radius: 16px; }
 /* Dua bintang di sudut berseberangan frame putih */
 .star { position: absolute; }
 .star-a { left: 118px; top: 796px; }
